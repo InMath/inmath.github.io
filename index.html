@@ -83,13 +83,17 @@
       
         <ol>
 <li><p>建一个包含指定范围的整数的数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> start = <span class="number">5</span>,end = <span class="number">9</span>;</div><div class="line"><span class="keyword">var</span> range_array = <span class="built_in">Array</span>.from(&#123;length:start-end+<span class="number">1</span>&#125;,(e,i)=&gt;i+start);</div></pre></td></tr></table></figure>
+<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> f1 = (start,end,step) =&gt; <span class="built_in">Array</span>.from(&#123;length:(end-start)/step + <span class="number">1</span>&#125;,(e,i)=&gt;i*step+start);</div></pre></td></tr></table></figure>
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> f2 = (start,end,step) =&gt; <span class="built_in">Array</span>(~~((end-start)/step)+<span class="number">1</span>).fill(<span class="number">0</span>).map((e,i)=&gt;i*step+start);</div></pre></td></tr></table></figure>
 </li>
 <li><p>将数组每个元素乘以2</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>].map((e)=&gt;e*<span class="number">2</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p>求数组之和</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>].reduce((a,b)=&gt;a+b,<span class="number">0</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查单词是否在句子中出现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> wordList = [<span class="string">"coffeescript"</span>, <span class="string">"eko"</span>, <span class="string">"play framework"</span>, <span class="string">"and stuff"</span>, <span class="string">"falsy"</span>],</div><div class="line">tweet = <span class="string">"This is an example tweet talking about javascript and stuff."</span>;</div><div class="line">wordList.some(e=&gt;tweet.indexOf(e))</div></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -112,12 +116,12 @@
 
 
 <ul class="page-direction" id="page-direction">
-    <li><a class="page-prev" href="javascript:;" title="Prev">
+    <li><a class="page-prev" href="javascript:;" title="Vorherige Seite">
       <span class="icon-stack">
         <i class="icon-circle icon-stack-base"></i>
         <i class="icon-angle-left"></i>
       </span>
-    <li><a class="page-next" href="javascript:;" title="Next">
+    <li><a class="page-next" href="javascript:;" title="Nächste Seite">
       <span class="icon-stack">
         <i class="icon-circle icon-stack-base"></i>
         <i class="icon-angle-right"></i>
@@ -133,7 +137,7 @@
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="text" name="q" results="0" placeholder="Search">
+    <input type="text" name="q" results="0" placeholder="Suche">
     <i class="icon-search"></i>
     <input type="hidden" name="q" value="site:inmath.github.io">
   </form>
@@ -152,7 +156,7 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Recent Posts</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
     
       <li>
